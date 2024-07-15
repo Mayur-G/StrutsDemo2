@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd"> 
+ 
+<struts> 
+	<package name="default" extends="struts-default" namespace="/javatechnology">	
+		<action name="java">
+			<result>/index.jsp</result>
+		</action>
+		
+		<action name="login" class="com.sb.actions.LoginAction">
+			<result name="success">/welcome.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+	
+	<package name="default1" extends="struts-default" namespace="/corejava">
+		<action name="java">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+	
+	<include file="struts-2.xml"></include>
+	<include file="struts-java.xml"></include>
+	
+</struts>   
